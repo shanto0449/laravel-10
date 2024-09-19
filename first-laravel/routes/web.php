@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserNamme;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::view('/home','home');
+Route::view('/about','about');
+
+Route::get('user-home',[UserNamme::class,'userHome']);
+Route::get('user-about/{name}',[UserNamme::class,'userAbout']);
+Route::get('admin-login',[UserNamme::class,'adminLogin']);
