@@ -14,6 +14,17 @@
             <input type="password" name="userpassword" placeholder="Enter user Password">
 
         </div>
+        <div >
+            <h4>Skill</h4>
+            <input type="checkbox" name="skill[]" value="php" id="php">
+            <label for="php">PHP</label>
+            <input type="checkbox" name="skill[]" value="java" id="java">
+            <label for="java">Java</label>
+            <input type="checkbox" name="skill[]" value="laravel" id="laravel">
+            <label for="laravel">Laravel</label>
+            <input type="checkbox" name="skill[]" value="c++" id="c++">
+            <label for="c++">C++</label>
+        </div>
         <div class="input-wrapper">
            <button>Add new User</button>
         </div>
