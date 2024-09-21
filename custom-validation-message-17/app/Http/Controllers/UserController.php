@@ -8,7 +8,7 @@ class UserController extends Controller
 {
     function addUser(Request $request){
         $request->validate([
-            'username'=>'required | min:6 | max:12',
+            'username'=>'required | uppercase',
             'useremail'=>'required | email',
             'userpassword'=>'required | min:6',
 
