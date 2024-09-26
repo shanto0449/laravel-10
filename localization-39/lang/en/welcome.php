@@ -6,7 +6,10 @@ return [
     "about"=>"About",
     "home"=>"Home",
     "contactUs"=>"Contact Us",
-    "aboutPage"=>"About Page"
+    "aboutPage"=>"About Page",
+
+    "aboutName"=>"Hi everyone,This is :name , How are you doing",
+
 ]
 
 ?>

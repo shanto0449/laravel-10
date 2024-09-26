@@ -6,7 +6,8 @@ return [
     "about"=>"에 대한",
     "home"=>"집",
     "contactUs"=>"문의하기",
-    "aboutPage"=>"About Page"
+    "aboutPage"=>"About Page",
+     "aboutName"=>"안녕하세요 여러분 :name 입니다. 잘 지내시나요?",
 ]
 
 ?>

@@ -6,7 +6,8 @@ return [
     "about"=>"के बारे में",
     "home"=>"घर",
     "contactUs"=>"हमसे संपर्क करें",
-    "aboutPage"=>"About Page"
+    "aboutPage"=>"About Page",
+     "aboutName"=>"सभी को नमस्कार, मैं हूं :name, आप कैसे हैं"
 ]
 
 ?>

@@ -2,8 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware('Setlang')->group(function(){
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+    Route::view('about','about');
+
+    Route::get('setlang/{lang}',function($lang){
+        Session::put('lang',$lang);
+        return redirect('/');
+    });
+
 });
 
-Route::view('about','about');
