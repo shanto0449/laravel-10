@@ -24,7 +24,7 @@ class StudentController extends Controller
     }
 
     function list(){
-        $studentData=Student::all();
+        $studentData=Student::paginate(5);
         return view('list-student',['students'=>$studentData]);
     }
 
@@ -32,6 +32,40 @@ class StudentController extends Controller
         $isDeleted=Student::destroy($id);
         if($isDeleted){
          return   redirect('list');
+        }
+    }
+
+    function edit($id){
+        $student=Student::find($id);
+        return view('edit',['data'=>$student]);
+    }
+
+    function editStudent(Request $request, $id){
+        $student=Student::find($id);
+        $student->name=$request->name;
+        $student->email=$request->email;
+        $student->phone=$request->phone;
+        if($student->save()){
+            return redirect('list');
+        }else{
+            return "Upfate Opration Fail";
+        }
+
+
+    }
+
+    function search(Request $request){
+        $studentData=Student::where('name','like',"%$request->search%")->get();
+
+        return view('list-student',['students'=>$studentData,'search'=>$request->search]);
+    }
+
+    function deleteMultiple(Request $request){
+        $result =Student::destroy($request->ids);
+        if($result){
+            return redirect('list');
+        }else{
+            return "Student not delete";
         }
     }
 
